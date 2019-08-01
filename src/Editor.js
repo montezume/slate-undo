@@ -57,7 +57,10 @@ class History extends React.Component {
     return (
       <div>
         <Toolbar>
-          <button onClick={this.onClickUndo}>undo</button>
+          <button onClick={this.onClickUndo}>undo (with onClick)</button>
+          <button onMouseDown={this.onClickUndo}>
+            undo (with onMouseDOwn)
+          </button>
           <button onMouseDown={this.onClickRedo}>redo</button>
           <span>Undos: {undos ? undos.size : 0}</span>
           <span>Redos: {redos ? redos.size : 0}</span>
