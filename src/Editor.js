@@ -5,7 +5,6 @@ import React from "react";
 import initialValue from "./value.json";
 
 const Toolbar = styled.div`
-  display: flex;
   margin-bottom: 4px;
 `;
 
@@ -62,8 +61,10 @@ class History extends React.Component {
             undo (with onMouseDOwn)
           </button>
           <button onMouseDown={this.onClickRedo}>redo</button>
-          <span>Undos: {undos ? undos.size : 0}</span>
-          <span>Redos: {redos ? redos.size : 0}</span>
+          <div>
+            <span>Undos: {undos ? undos.size : 0}</span>
+            <span>Redos: {redos ? redos.size : 0}</span>
+          </div>
         </Toolbar>
         <StyledEditor
           placeholder="Enter some text..."
